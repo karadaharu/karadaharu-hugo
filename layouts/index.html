@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<div id="layout" class="pure-g">
+    {{ partial "sidebar.html" . }}
+
+    <div class="content pure-u-1 pure-u-md-12-24">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <section class="post">
+                  <img src="{{ .Site.BaseURL }}main.jpg" alt="main visual">
+                </section>
+            </div>
+            {{ partial "pagination.html" . }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+</body>
+</html>
