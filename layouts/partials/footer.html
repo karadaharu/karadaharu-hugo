@@ -1,7 +1,12 @@
 <div class="footer">
 </div>
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX&#45;AMS&#45;MML_HTMLorMML"></script> -->
-<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX&#45;AMS&#45;MML_HTMLorMML" type="text/javascript"></script> -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } ,
+         extensions: ["AMSmath.js", "AMSsymbols.js"]
+  }
+});
+</script>
 <script type="text/javascript" 
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
@@ -13,8 +18,6 @@ MathJax.Hub.Config({
     processEscapes: true,
     processEnvironments: true,
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-  TeX: { equationNumbers: { autoNumber: "AMS" },
-         extensions: ["AMSmath.js", "AMSsymbols.js"] }
   }
 });
 </script>
