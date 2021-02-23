@@ -11,30 +11,18 @@
       </div>
         <div>
             <!-- A wrapper for all the blog posts -->
+            {{ range .Pages.GroupByDate "2006"}}
             <div class="posts">
-                {{ range .Paginator.Pages }}
+              <h3>{{ .Key }}</h3>
+                {{ range .Pages }}
                 <section class="post">
                     <header class="post-header">
                         <a href="{{ .Permalink }}" class="post-title">{{ .Title }}</a>
-                        <!-- <p class="post&#45;meta"> -->
-                        <!--     {{ with .Params.author }} -->
-                        <!--         By <strong class="post&#45;author">{{ . }}</strong> -->
-                        <!--     {{ end }} -->
-                        <!--     {{ if isset .Params "categories" }} -->
-                        <!--         under  -->
-                        <!--         {{ $baseUrl := .Site.BaseURL }} -->
-                        <!--         {{ range .Params.categories }}<a class="post&#45;category post&#45;category&#45;{{ . }}" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }} -->
-                        <!--     {{ end }} -->
-                        <!-- </p> -->
                     </header>
-
-                    <!-- <div class="post&#45;description"> -->
-                    <!--     {{ .Summary }} -->
-                    <!-- </div> -->
                 </section>
                 {{ end }}
             </div>
-            {{ partial "pagination.html" . }}
+            {{ end }}
             {{ partial "footer.html" . }}
         </div>
     </div>
