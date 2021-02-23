@@ -20,7 +20,9 @@
                    {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href="{{ $baseUrl }}/categories/{{ . | urlize }}">{{ . }}</a>{{ end }}
                {{ end }}
            </p>
-          <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+           {{ if not (eq .Type "no-share") }}
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+          {{ end }}
        </header>
       </div>
         <div>
